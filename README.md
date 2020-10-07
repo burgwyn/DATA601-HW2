@@ -2,6 +2,14 @@
 
 ## Overview
 
+## Goals
+
+## Motivation & Background
+
+## Table of Contents
+
+## Software Requirements
+
 ## Getting Started
 
 ## Hypothesis
@@ -11,6 +19,7 @@
 ## Results
 
 ## Conclusion and Future Analysis
+
 
 ## Project Info
 
