@@ -24,7 +24,17 @@ While there appears to be no existing research on this particular dataset, Chica
 
 ## Table of Contents
 
+- API request code - `data.py`
 - Python Notebook - `HW2.ipynb`
+
+```shell
+├── HW2.ipynb
+├── LICENSE
+├── README.md
+├── data
+│   └── chicago_employee_salary_data.json
+└── data.py
+```
 
 ## Software Requirements
 
@@ -72,7 +82,44 @@ df['hourly_rate'] = pd.to_numeric(df['hourly_rate'],errors='coerce')
 
 ## Results
 
-The Chicago Police Department is the largest employer of salaried staff.
+### Who is the highest paid salaried employee?  What is that salary?
+
+Jamie Rhee, Commissioner of Aviation is the highest salaried employee.  He is responsible for both Midway and O'Hare, two large metropolition airports.
+
+
+### What is the lowest hourly wage?
+
+The lowest hourly wageb is $3/hour and is paid to two roles - FOSTER GRANDPARENT and SENIOR COMPANION in the FAMILY & SUPPORT department.
+
+### Which department is has the highest wage bill?
+
+The Chicago Police Department is the largest employer of salaried staff has has one of the highest median salaries.
+
+### Which department is paying the least?
+
+The Board of Elections has the lowest median salary.
+
+### What job titles are the most lucrative?  Which are the least?
+
+The highest paid poisitons are department leaders and the mayor:
+
+| Title | Department| Salary |
+|---|---|---|
+| FIRST DEPUTY FIRE COMMISSIONER | FIRE | 197736.0 |
+| MAYOR	| MAYOR'S OFFICE | 216210.0 |
+| FIRE COMMISSIONER	FIRE | 217728.0 |
+| SUPERINTENDENT OF POLICE | POLICE | 260004.0 | 
+| COMMISSIONER OF AVIATION | AVIATION | 275004.0 |
+
+The lowest paid poisiton are almost exlusively in the Board of Elections:
+
+| Title | Department| Salary |
+|---|---|---|
+| COMMITTEE SECRETARY | CITY COUNCIL | 25848.0	|
+| ELECTION EQUIPMENT & SUPPLY SPEC I | BOARD OF ELECTION | 30060.0 |
+| POLLING PLACE INVESTIGATOR I | BOARD OF ELECTION	| 30822.0 |
+| CLERK - BD OF ELECTIONS | BOARD OF ELECTION | 31584.0	|
+| ELECTION EQUIPMENT & SUPPLY SPEC II | BOARD OF ELECTION | 34860.0	|
 
 ## Conclusion and Future Analysis
 
