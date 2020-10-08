@@ -138,6 +138,15 @@ The lowest paid poisiton are almost exlusively in the Board of Elections:
 
 ## Conclusion and Future Analysis
 
+The median salary in Chicago exceeds the national median of $56,516 [as reported by the US Census in 2015](https://www.census.gov/library/publications/2016/demo/p60-256.html)
+
+```
+Min: 20400.0
+Mean: 89609.2195137762
+Median: 90024.0
+Max: 275004.0
+``` 
+
 The dataset lacks some context that may explain why certain salaries set the way they are.  Additional information such as years of service and degrees and professional certifications would be helpful.
 
 Although the dataset includes about 33,000 employees, teachers are not included.  This typically a large block of public sector employees and would be interesting to explore.
