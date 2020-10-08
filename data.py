@@ -34,4 +34,7 @@ with open(os.path.join('data', 'chicago_employee_salary_data.json'), 'w') as fil
 
 ## build DataFrame from JSON response saved to file
 with open(os.path.join('data', 'chicago_employee_salary_data.json'), 'r') as file:
-    df = pd.DataFrame.from_dict(r.json())
+    data = json.load(file)
+
+df = pd.DataFrame.from_dict(data)
+print(df.head())
