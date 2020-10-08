@@ -2,7 +2,7 @@
 
 ## Overview
 
-This study explores publicly available salary data from the City of Chicago.  Transparency in government is a fundamental trait in a functioning democracy.  The [Open Government](https://en.wikipedia.org/wiki/Open_government) movement seeks to ensure citizens have the right to see documents and other data that pertain to how their government operates, including how budgets are spent.
+This study explores [publicly available salary data API](https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w) from the City of Chicago.  Transparency in government is a fundamental trait in a functioning democracy.  The [Open Government](https://en.wikipedia.org/wiki/Open_government) movement seeks to ensure citizens have the right to see documents and other data that pertain to how their government operates, including how budgets are spent.
 
 ## Goals
 
@@ -36,6 +36,14 @@ The final solution should look like this after executing `data.py`
 └── data.py
 ```
 
+### Getting Started
+
+Run the data script to fetch data from the API
+```shell
+python data.py
+```
+Run the included Jupyter Notebook `HW2.ipynb` to review the data analysis
+
 ## Software Requirements
 
 This solution requires Conda and Python 3.8.  In addition it uses the following libraries:
@@ -45,21 +53,11 @@ This solution requires Conda and Python 3.8.  In addition it uses the following 
 
 ## Data
 
-The final dataset resides in the `data` directory.
+The final dataset, `chicago_employee_salary_data.json`, resides in the `data` directory/
 
 Data is fetched from the City of Chicago's open data portal - `https://data.cityofchicago.org/resource/xzkq-xp2w.json?$limit=50000`
 
 The url above includes a querystring parameter `$limit` to ensure the full dataset of ~33,000 records is retrieved.  This data is publicly available and not authentication or authorization is required.  
-
-## Getting Started
-
-Run the data script to fetch data from the API
-```shell
-python data.py
-```
-Run the included Jupyter Notebook `HW2.ipynb` to review the data analysis
-
-## Data Cleaning
 
 The data dictionary is published along with the [dataset](https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w) and reproduced below
 
@@ -72,6 +70,8 @@ The data dictionary is published along with the [dataset](https://data.cityofchi
 | Salary or Hourly | Defines whether an employee is paid on an hourly basis or salary basis. Hourly employees are further defined by the number of hours they work in a week. See the "Frequency Description" column. | Plain Text |
 | Typical Hours	| Describes the typical amount of work for hourly employees. This data does not apply to salary employees. 40 - Employee paid on an hourly basis; works an 8 hour day; can be either full-time permanent (FT/P) or full-time temporary (FT-T) which is a seasonal employee; 35 - Employee paid on an hourly basis; works a 7 hour day; can be either full-time permanent (FT/P) or full-time temporary (FT-T) which is a seasonal employee; 20 - Employee paid on a part-time, hourly basis; typically works a 4 hour day, 5 days a week; 10 - Employee paid on a part-time, hourly basis; works 10 hours or less in a week. | Number |
 | Annual Salary | Annual salary rates. Only applies for employees whose pay frequency is "Salary". Hourly employees rates are only shown in "Hourly Rates" column. | Number |
+
+### Data Cleaning
 
 The data clean up is fairly straightforward, filling default values of '0' for `NaN` columns and casting wage and hour fields to numeric values.
 
