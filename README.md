@@ -4,6 +4,8 @@
 
 This study explores [publicly available salary data API](https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w) from the City of Chicago.  Transparency in government is a fundamental trait in a functioning democracy.  The [Open Government](https://en.wikipedia.org/wiki/Open_government) movement seeks to ensure citizens have the right to see documents and other data that pertain to how their government operates, including how budgets are spent.
 
+<img src="https://github.com/burgwyn/DATA601-HW2/blob/main/images/salary_hourly_pie.png" alt="Pie chart of departments" />
+
 ## Goals
 
 Explore and examine the nature of the wage information for both salaried and hourly public employees of the City of Chicago through requests against a publicly available RESTful API.
@@ -33,7 +35,12 @@ The final solution should look like this after executing `data.py`
 ├── README.md
 ├── data
 │   └── chicago_employee_salary_data.json
-└── data.py
+├── data.py
+└── images
+    ├── hourly_pie.png
+    ├── salary_distribution.png
+    ├── salary_hourly_pie.png
+    └── salary_pie.png
 ```
 
 ### Getting Started
@@ -91,7 +98,6 @@ df['hourly_rate'] = pd.to_numeric(df['hourly_rate'],errors='coerce')
 
 Jamie Rhee, Commissioner of Aviation is the highest salaried employee.  He is responsible for both Midway and O'Hare, two large metropolition airports.
 
-
 ### What is the lowest hourly wage?
 
 The lowest hourly wage is $3/hour and is paid to two roles - FOSTER GRANDPARENT and SENIOR COMPANION in the FAMILY & SUPPORT department.
@@ -99,6 +105,8 @@ The lowest hourly wage is $3/hour and is paid to two roles - FOSTER GRANDPARENT 
 ### Which department is has the highest wage bill?
 
 The Chicago Police Department is the largest employer of salaried staff has has one of the highest median salaries.
+
+<img src="https://github.com/burgwyn/DATA601-HW2/blob/main/images/salary_pie.png" alt="Pie chart of departments" />
 
 ### Which department is paying the least?
 
