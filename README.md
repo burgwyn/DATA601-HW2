@@ -145,7 +145,9 @@ Min: 20400.0
 Mean: 89609.2195137762
 Median: 90024.0
 Max: 275004.0
-``` 
+```
+
+In addition, the City of Chicago recently [raised the minimum wage](https://www.chicago.gov/city/en/depts/bacp/supp_info/minimumwageinformation.html).  It would be worthwhile to revisit this dataset to see if there was any impact.
 
 The dataset lacks some context that may explain why certain salaries set the way they are.  Additional information such as years of service and degrees and professional certifications would be helpful.
 
