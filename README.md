@@ -2,9 +2,7 @@
 
 ## Overview
 
-Transparency in government is a fundamental trait in a functioning democracy.  The [Open Government](https://en.wikipedia.org/wiki/Open_government) movement seeks to ensure citizens have the right to see documents and other data that pertain to how their government operates, including how budgets are spent.
-
-This study explores publicly available salary data from the City of Chicago.
+This study explores publicly available salary data from the City of Chicago.  Transparency in government is a fundamental trait in a functioning democracy.  The [Open Government](https://en.wikipedia.org/wiki/Open_government) movement seeks to ensure citizens have the right to see documents and other data that pertain to how their government operates, including how budgets are spent.
 
 ## Goals
 
@@ -18,7 +16,7 @@ Explore and examine the nature of the wage information for both salaried and hou
 
 ## Motivation & Background
 
-I was drawn to this study because I believe strongly that we as citizens should understand how our governments operate and how they allocate resources.  While I no longer live in Chicago, I did spend 7 memorable years: I met my wife, made lifelong friendships and ignited my passion for software development.
+I was drawn to this study because I believe strongly that we as citizens should understand how our governments operate and how they allocate resources.  While I no longer live in Chicago, I did spend 7 memorable years there: I met my wife, made lifelong friendships and ignited my passion for software development.
 
 While there appears to be no existing research on this particular dataset, Chicago's Data Portal [acknowledges this is the most popular dataset](https://digital.chicago.gov/index.php/starting-salary/).
 
@@ -26,6 +24,8 @@ While there appears to be no existing research on this particular dataset, Chica
 
 - API request code - `data.py`
 - Python Notebook - `HW2.ipynb`
+
+The final solution should look like this after executing `data.py`
 
 ```shell
 ├── HW2.ipynb
@@ -41,6 +41,7 @@ While there appears to be no existing research on this particular dataset, Chica
 This solution requires Conda and Python 3.8.  In addition it uses the following libraries:
 - [Requests](https://requests.readthedocs.io/en/master/user/quickstart/#json-response-content) - HTTP request library
 - [Pandas](https://pandas.pydata.org/) - Data analysis library
+- [JSON](https://docs.python.org/3/library/json.html) - Storing and retrieving JSON dataset
 
 ## Data
 
@@ -52,11 +53,15 @@ The url above includes a querystring parameter `$limit` to ensure the full datas
 
 ## Getting Started
 
-Run the included Jupyter Notebook `HW2.ipynb`
+Run the data script to fetch data from the API
+```shell
+python data.py
+```
+Run the included Jupyter Notebook `HW2.ipynb` to review the data analysis
 
 ## Data Cleaning
 
-The data dictionary is published along with the dataset:
+The data dictionary is published along with the [dataset](https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w) and reproduced below
 
 | Column Name | Description | Type |
 |---|---|---|
@@ -68,7 +73,7 @@ The data dictionary is published along with the dataset:
 | Typical Hours	| Describes the typical amount of work for hourly employees. This data does not apply to salary employees. 40 - Employee paid on an hourly basis; works an 8 hour day; can be either full-time permanent (FT/P) or full-time temporary (FT-T) which is a seasonal employee; 35 - Employee paid on an hourly basis; works a 7 hour day; can be either full-time permanent (FT/P) or full-time temporary (FT-T) which is a seasonal employee; 20 - Employee paid on a part-time, hourly basis; typically works a 4 hour day, 5 days a week; 10 - Employee paid on a part-time, hourly basis; works 10 hours or less in a week. | Number |
 | Annual Salary | Annual salary rates. Only applies for employees whose pay frequency is "Salary". Hourly employees rates are only shown in "Hourly Rates" column. | Number |
 
-The data clean up is fairly straightforward, just filling default values of '0' for `NaN` columns and casting wage and hour fields to numeric values.
+The data clean up is fairly straightforward, filling default values of '0' for `NaN` columns and casting wage and hour fields to numeric values.
 
 ```py
 ## defualt NaN to 0
@@ -89,7 +94,7 @@ Jamie Rhee, Commissioner of Aviation is the highest salaried employee.  He is re
 
 ### What is the lowest hourly wage?
 
-The lowest hourly wageb is $3/hour and is paid to two roles - FOSTER GRANDPARENT and SENIOR COMPANION in the FAMILY & SUPPORT department.
+The lowest hourly wage is $3/hour and is paid to two roles - FOSTER GRANDPARENT and SENIOR COMPANION in the FAMILY & SUPPORT department.
 
 ### Which department is has the highest wage bill?
 
