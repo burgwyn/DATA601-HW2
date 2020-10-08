@@ -36,5 +36,11 @@ with open(os.path.join('data', 'chicago_employee_salary_data.json'), 'w') as fil
 with open(os.path.join('data', 'chicago_employee_salary_data.json'), 'r') as file:
     data = json.load(file)
 
+# laod data into DataFrame
 df = pd.DataFrame.from_dict(data)
+
+# print shape of dataset
+print(df.shape)
+
+# print first few rows
 print(df.head())

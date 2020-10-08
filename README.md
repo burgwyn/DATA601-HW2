@@ -64,7 +64,9 @@ The final dataset, `chicago_employee_salary_data.json`, resides in the `data` di
 
 Data is fetched from the City of Chicago's open data portal - `https://data.cityofchicago.org/resource/xzkq-xp2w.json?$limit=50000`
 
-The url above includes a querystring parameter `$limit` to ensure the full dataset of ~33,000 records is retrieved.  This data is publicly available and not authentication or authorization is required.  
+The url above includes a querystring parameter `$limit` to ensure the full dataset of ~33,000 records is retrieved.  This data is publicly available and not authentication or authorization is required.
+
+The dataset shape is `(32928, 8)` or 8 columns and 32928 rows.
 
 The data dictionary is published along with the [dataset](https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w) and reproduced below
 
